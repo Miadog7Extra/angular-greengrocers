@@ -1,0 +1,13 @@
+<!-- <div *ngFor="let grocerie of getGrocieries()">
+    <span>{{grocerie.name}}</span>
+</div> -->
+
+<ul class="item-list store--item-list">
+    <li *ngFor="let grocerie of getGrocieries()">
+      <div class="store--item-icon">
+        <img src="assets/icons/{{grocerie.id}}.svg" alt={{grocerie.name}}/>
+      </div>
+      <button (click)="addToCart(grocerie)">Add to cart</button>
+    </li>
+  </ul>
+  

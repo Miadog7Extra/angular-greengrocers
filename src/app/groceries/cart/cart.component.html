@@ -1,0 +1,16 @@
+<div class="cart--item-list-container">
+    <ul class="item-list cart--item-list">
+      <li *ngFor="let grocerie of cart.keys()">
+        <img
+          class="cart--item-icon"
+          src="assets/icons/{{grocerie.id}}.svg"
+          alt={{grocerie.name}}
+        />
+        <p>{{grocerie.name}}</p>
+        <button class="quantity-btn remove-btn center" (click)="reduceQuantity(grocerie)">-</button>
+        <span class="quantity-text center">{{cart.get(grocerie)}}</span>
+        <button class="quantity-btn add-btn center" (click)="increaseQuantity(grocerie)">+</button>
+      </li>
+    </ul>
+  </div>
+  
