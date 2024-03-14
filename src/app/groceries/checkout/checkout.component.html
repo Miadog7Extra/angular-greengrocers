@@ -1,6 +1,15 @@
-<!-- <main>
+<main>
     <h2>Your Cart</h2>
     <app-cart></app-cart>
-    <app-total></app-total>
-</main> -->
-<h1>checkout works</h1>
+    <div>
+        <h3>Total</h3>
+      </div>
+      
+      <div>
+        <span class="total-number">{{getTotal() | currency: 'EUR'}}</span>
+      </div>
+      <div>
+        <button (click)="emptyCart()">Pay for Cart</button>
+        <button routerLink="/">Back to Store</button>
+      </div>
+</main>

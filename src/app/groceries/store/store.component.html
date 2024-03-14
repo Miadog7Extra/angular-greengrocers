@@ -1,3 +1,5 @@
+<header id="store">
+  <h1>Greengrocers</h1>
 <div>
   Choose Fruit/Vegetables
   <input type="checkbox" [(ngModel)]="filterTypeFruits">
@@ -13,4 +15,9 @@
       <button (click)="addToCart(grocerie)">Add to cart</button>
     </li>
   </ul>
-  
+</header>
+<main id="cart">
+  <h2>Your Cart</h2>
+  <app-cart></app-cart>
+  <app-total></app-total>
+</main>
