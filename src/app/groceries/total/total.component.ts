@@ -18,6 +18,7 @@ export class TotalComponent {
   }
 
   getTotal() {
+    this.total = 0;
     for(let grocerie of this.cart.keys()){
       //@ts-ignore
       const itemPrice: number = grocerie.price*this.cart.get(grocerie)
