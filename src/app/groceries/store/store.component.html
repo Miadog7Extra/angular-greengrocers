@@ -1,9 +1,12 @@
-<!-- <div *ngFor="let grocerie of getGrocieries()">
-    <span>{{grocerie.name}}</span>
-</div> -->
-
+<div>
+  Choose Fruit/Vegetables
+  <input type="checkbox" [(ngModel)]="filterTypeFruits">
+  <input type="checkbox" [(ngModel)]="filterTypeVegetables" />
+</div>
+<button (click)="sortByPrice()">Sort by Price</button>
+<button (click)="sortByName()">Sort by Name</button>
 <ul class="item-list store--item-list">
-    <li *ngFor="let grocerie of getGrocieries()">
+    <li *ngFor="let grocerie of getFilteredGroceries()">
       <div class="store--item-icon">
         <img src="assets/icons/{{grocerie.id}}.svg" alt={{grocerie.name}}/>
       </div>

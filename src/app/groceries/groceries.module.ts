@@ -4,6 +4,9 @@ import { CartComponent } from './cart/cart.component';
 import { StoreComponent } from './store/store.component';
 import { TotalComponent } from './total/total.component';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,11 +14,12 @@ import { HttpClientModule } from '@angular/common/http'
   declarations: [
     CartComponent,
     StoreComponent,
-    TotalComponent
+    TotalComponent,
+    CheckoutComponent
   ],
   imports: [
-    CommonModule, HttpClientModule
+    CommonModule, HttpClientModule, FormsModule, RouterModule
   ],
-  exports: [StoreComponent, CartComponent, TotalComponent]
+  exports: [StoreComponent, CartComponent, TotalComponent, CheckoutComponent]
 })
 export class GroceriesModule { }

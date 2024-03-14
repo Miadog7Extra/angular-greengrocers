@@ -17,4 +17,12 @@ export class GroceriesService {
     // @ts-ignore
     return firstValueFrom(this.http.get(`${environment.apiUrl}groceries`))
   }
+  get vegetables(): Promise<Item[]> {
+    //@ts-ignore
+    return firstValueFrom(this.http.get(`${environment.apiUrl}groceries?type=vegetable`))
+  }
+  get fruit(): Promise<Item[]> {
+    //@ts-ignore
+    return firstValueFrom(this.http.get(`${environment.apiUrl}groceries?type=fruit`))
+  }
 }

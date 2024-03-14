@@ -24,7 +24,6 @@ export class TotalComponent {
       const itemPrice: number = grocerie.price*this.cart.get(grocerie)
       this.total+=itemPrice
     }
-    console.log(this.total)
     return this.total;
   }
 
